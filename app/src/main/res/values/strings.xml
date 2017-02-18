@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HackFSU</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+
+    <string name="popfoods">Popular Foods</string>
+    <string name="pizza">Pizza</string>
+    <string name="burgers">Burgers</string>
+    <string name="steak">Steak</string>
+    <string name="sandwiches">Sandwiches</string>
+    <string name="everything">Errrthang</string>
+
+    <string name="region">Regions/Ethnicities</string>
+    <string name="american">American</string>
+    <string name="chinese">Chinese</string>
+    <string name="mediterranean">Mediterranean</string>
+    <string name="central_american">Central American</string>
+    <string name="south_american">South American</string>
+
+    <string name="custom_food">Custom</string>
+
+    <string name="submit_survey">Let\'s Eat!</string>
+
+</resources>
