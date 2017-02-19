@@ -7,17 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 
-public class MyInterestsFragment extends Fragment {
 
+public class AddFriendsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private Button button;
 
-    public MyInterestsFragment() {
+    public AddFriendsFragment() {
         // Required empty public constructor
     }
 
@@ -26,22 +23,9 @@ public class MyInterestsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
-
-        View view = inflater.inflate(R.layout.fragment_my_interests, container, false);
-        button = (Button) view.findViewById(R.id.find_food);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"button clicked", Toast.LENGTH_LONG).show();
-            }
-        });
-        return view;
-
+        return inflater.inflate(R.layout.fragment_add_friends, container, false);
     }
-
-
+    
 
     /**
      * This interface must be implemented by activities that contain this

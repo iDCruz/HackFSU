@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:text="MY INTERESTS"
         android:padding="8dp"
-        android:id="@+id/button" />
-
+        android:id="@+id/find_food" />
 
 </FrameLayout>
