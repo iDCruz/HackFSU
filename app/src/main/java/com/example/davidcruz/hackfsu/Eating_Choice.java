@@ -29,7 +29,8 @@ public class Eating_Choice extends AppCompatActivity
         MyInterestsFragment fragment = new MyInterestsFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction =
                 getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content_eating__choice, fragment);
+        fragmentTransaction.replace(R.id.content_eating__choice, fragment,
+                fragment.getTag());
         fragmentTransaction.commit();
 
 
@@ -109,10 +110,17 @@ public class Eating_Choice extends AppCompatActivity
             SpecificFoodFragment fragment = new SpecificFoodFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_eating__choice, fragment);
+            fragmentTransaction.replace(R.id.content_eating__choice, fragment,
+                    fragment.getTag());
             fragmentTransaction.commit();
         } else if (id == R.id.nav_with_friends) {
             //TODO: probably wont' get done
+            AddFriendsFragment fragment = new AddFriendsFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content_eating__choice, fragment,
+                    fragment.getTag());
+            fragmentTransaction.commit();
         } else if (id ==R.id.nav_profile) {
             //TODO: change initial settings
         } else if (id== R.id.nav_logOut) {
