@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.davidcruz.hackfsu">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -35,6 +36,10 @@
         </activity>
         <activity android:name="com.auth0.android.lock.provider.WebViewActivity" />
         <activity android:name=".InterestsActivity" />
+        <activity
+            android:name=".Eating_Choice"
+            android:label="@string/title_activity_eating__choice"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

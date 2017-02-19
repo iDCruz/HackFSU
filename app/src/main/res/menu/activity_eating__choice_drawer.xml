@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="Select Place By">
+            <menu>
+                <item
+                    android:id="@+id/nav_interests"
+                    android:icon="@drawable/ic_my_interests"
+                    android:title="Based on my Interests" />
+                <item
+                    android:id="@+id/nav_specific"
+                    android:icon="@drawable/ic_whatshot_black_24dp"
+                    android:title="Specific Food" />
+                <item
+                    android:id="@+id/nav_with_friends"
+                    android:icon="@drawable/ic_with_friends"
+                    android:title="With Frands" />
+
+
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="Profile" />
+            <item
+                android:id="@+id/nav_logOut"
+                android:icon="@drawable/ic_log_out"
+                android:title="Log Out"/>
+        </menu>
+    </item>
+
+
+</menu>

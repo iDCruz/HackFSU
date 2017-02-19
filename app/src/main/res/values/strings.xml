@@ -21,6 +21,12 @@
     <string name="custom_food">Custom</string>
 
     <string name="submit_survey">Let\'s Eat!</string>
+    <string name="title_activity_eating__choice">Eating_Choice</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
     <string name="auth0_client_id">BwiLoAzGcVFjwdfJ9JBIPbilN6O1geQE</string>
     <string name="auth0_domain">idcruz.auth0.com</string>
