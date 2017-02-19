@@ -10,9 +10,11 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,7 +27,6 @@ import java.util.Map;
 public class InterestsActivity extends AppCompatActivity {
 
     ArrayList<String> interests;
-    private Button readybtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +35,6 @@ public class InterestsActivity extends AppCompatActivity {
         Log.i("active", "interests activity");
 
         interests = new ArrayList<>();
-        readybtn = (Button) findViewById(R.id.btn_submitSurvey);
-        readybtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Eating_Choice.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public void onCheckboxClicked(View view){
@@ -53,6 +46,7 @@ public class InterestsActivity extends AppCompatActivity {
     }
 
     public void onSubmitInterests(View view){
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JSONArray jsonArray = new JSONArray(interests);
         JSONObject jsonObject = new JSONObject();
         try {
@@ -66,12 +60,12 @@ public class InterestsActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(JSONObject response) {
-
+                Log.i("response", response.toString());
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.i("response", error.toString());
             }
         })
         {@Override
@@ -80,5 +74,11 @@ public class InterestsActivity extends AppCompatActivity {
             parameters.put("Authorization", "Bearer " + App.user_id_token);
             return parameters;
         }};
+
+        requestQueue.add(request);
+
+        Intent intent = new Intent(getApplicationContext(), Eating_Choice.class);
+        startActivity(intent);
+
     }
 }
