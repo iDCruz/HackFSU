@@ -1,11 +1,15 @@
 package com.example.davidcruz.hackfsu;
 
+import android.Manifest;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +34,7 @@ import java.util.Map;
 //auth0 sample for managing session
 //https://github.com/auth0-samples/auth0-android-sample/tree/master/03-Session-Handling
 
-public class LoginActivity extends AppCompatActivity implements LocationListener{
+public class LoginActivity extends AppCompatActivity implements LocationListener {
 
     private Lock lock;
 
@@ -39,16 +43,16 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i("active","active");
 
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
-        if(location != null){
+        if (location != null) {
             //save to app location
             App.user_latitude = Double.toString(location.getLatitude());
-            App.user_longitude = Double.toHexString(location.getLongitude());
-        }
-        else{
+            App.user_longitude = Double.toString(location.getLongitude());
+        } else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         }
 
@@ -99,7 +103,7 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
         public void onAuthentication(Credentials credentials) {
             // Login Success
             App.user_id_token = credentials.getIdToken();
-            CredentialsManager.saveCredentials(getApplicationContext(),credentials);
+            CredentialsManager.saveCredentials(getApplicationContext(), credentials);
             Log.i("Auth credentials", credentials.getAccessToken());
             startActivity(new Intent(LoginActivity.this, InterestsActivity.class));
             finish();
@@ -111,12 +115,11 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
         }
 
         @Override
-        public void onError(LockException error){
+        public void onError(LockException error) {
             // Login Error response
-            Toast.makeText(getApplicationContext(),"Nah fam", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Nah fam", Toast.LENGTH_SHORT).show();
         }
     };
-
 
 
     @Override
@@ -124,7 +127,7 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
         if (location != null) {
             Log.v("Location Changed", location.getLatitude() + " and " + location.getLongitude());
             App.user_latitude = Double.toString(location.getLatitude());
-            App.user_longitude = Double.toHexString(location.getLongitude());
+            App.user_longitude = Double.toString(location.getLongitude());
             locationManager.removeUpdates(this);
         }
     }
@@ -143,4 +146,5 @@ public class LoginActivity extends AppCompatActivity implements LocationListener
     public void onProviderDisabled(String provider) {
 
     }
+
 }

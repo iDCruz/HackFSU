@@ -10,4 +10,5 @@ public class App extends Application {
     public static String user_id_token;
     public static String user_longitude;
     public static String user_latitude;
+
 }

@@ -3,6 +3,7 @@ package com.example.davidcruz.hackfsu;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,7 @@ public class Eating_Choice extends AppCompatActivity
     Toolbar toolbar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("active", "eating choice");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eating__choice);
 
