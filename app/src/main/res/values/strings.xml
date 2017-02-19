@@ -4,21 +4,22 @@
     <string name="hint_password">Password</string>
     <string name="login">Login</string>
 
+
     <string name="popfoods">Popular Foods</string>
     <string name="pizza">Pizza</string>
     <string name="burgers">Burgers</string>
     <string name="steak">Steak</string>
     <string name="sandwiches">Sandwiches</string>
-    <string name="everything">Errrthang</string>
+    <string name="buffet">Buffets</string>
 
     <string name="region">Regions/Ethnicities</string>
-    <string name="american">American</string>
+    <string name="thai">Thai</string>
     <string name="chinese">Chinese</string>
     <string name="mediterranean">Mediterranean</string>
-    <string name="central_american">Central American</string>
-    <string name="south_american">South American</string>
+    <string name="mexican">Mexican</string>
+    <string name="cambodian">Cambodian</string>
 
-    <string name="custom_food">Custom</string>
+    <string name="chilean">Chilean</string>
 
     <string name="submit_survey">Let\'s Eat!</string>
     <string name="title_activity_eating__choice">Going for a Munch</string>

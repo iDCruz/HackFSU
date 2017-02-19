@@ -48,7 +48,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/everything"
+                android:text="@string/buffet"
                 android:onClick="onCheckboxClicked"/>
 
             <TextView
@@ -58,7 +58,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/american"
+                android:text="@string/thai"
                 android:onClick="onCheckboxClicked"/>
             <CheckBox
                 android:layout_width="wrap_content"
@@ -73,18 +73,18 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/central_american"
+                android:text="@string/mexican"
                 android:onClick="onCheckboxClicked"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/south_american"
+                android:text="@string/cambodian"
                 android:onClick="onCheckboxClicked"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/custom_food"/>
+                android:text="@string/chilean"/>
 
             <!-- need to add custom implementation, dynamically add chkbox with txt -->
 
