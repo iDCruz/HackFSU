@@ -16,11 +16,22 @@ import android.view.MenuItem;
 public class Eating_Choice extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    NavigationView navigationView = null;
+    Toolbar toolbar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eating__choice);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        //Set initial fragment
+        MyInterestsFragment fragment = new MyInterestsFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction =
+                getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content_eating__choice, fragment);
+        fragmentTransaction.commit();
+
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -35,10 +46,10 @@ public class Eating_Choice extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -66,6 +77,7 @@ public class Eating_Choice extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -81,15 +93,28 @@ public class Eating_Choice extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_interests) {
-            // Handle the camera action
+            //Handle interest
+            //TODO: Load google map navigation
+            //Set initial fragment
+            MyInterestsFragment fragment = new MyInterestsFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content_eating__choice, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_specific) {
-
+            //TODO: display form and then google navigate
+            //Set initial fragment
+            SpecificFoodFragment fragment = new SpecificFoodFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content_eating__choice, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_with_friends) {
-
+            //TODO: probably wont' get done
         } else if (id ==R.id.nav_profile) {
-
+            //TODO: change initial settings
         } else if (id== R.id.nav_logOut) {
-            
+            //TODO: log out
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
