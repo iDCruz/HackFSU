@@ -22,4 +22,13 @@
 
     <string name="submit_survey">Let\'s Eat!</string>
 
+    <string name="auth0_client_id">BwiLoAzGcVFjwdfJ9JBIPbilN6O1geQE</string>
+    <string name="auth0_domain">idcruz.auth0.com</string>
+
+    <string name="auth0_preferences">AUTH0_SHARED_PREFERENCES_KEY</string>
+    <string name="refresh">Get New ID With a RefreshTokenID</string>
+    <string name="token">Get New ID With a TokenID</string>
+    <string name="logout">Logout</string>
+
+
 </resources>

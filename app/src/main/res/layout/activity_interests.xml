@@ -92,7 +92,8 @@
                 android:id="@+id/btn_submitSurvey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submit_survey"/>
+                android:text="@string/submit_survey"
+                android:onClick="onSubmitInterests"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
