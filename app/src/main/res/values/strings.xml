@@ -35,5 +35,6 @@
     <string name="refresh">Get New ID With a RefreshTokenID</string>
     <string name="token">Get New ID With a TokenID</string>
     <string name="logout">Logout</string>
+    <string name="test_my_friends">Test for Friends</string>
 
 </resources>
